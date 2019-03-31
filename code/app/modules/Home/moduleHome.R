@@ -37,7 +37,7 @@ serverHome <- function(input, output, session)
             
             column(
               width = 12,
-              h1("Shiny Catalogue", style="font-family: 'Roboto';"),
+              h1("Shiny Catalogue"),
               hr(),
               h5("A collection of re-usable components, modules and tutorials for using advanced R Shinydashboard functionality.")
             )
