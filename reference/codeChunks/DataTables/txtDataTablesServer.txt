@@ -1,0 +1,47 @@
+  ...
+  # Render table
+  output$tblExampleDataTable <- DT::renderDataTable({
+    
+    datatable(
+      # Table data
+      data = EuStockMarkets,
+      
+      # Hiding row names
+      rownames = FALSE,
+      
+      # Single row can be selected
+      selection = "single",
+      
+      # Enabling buttons on top of table and scrollbar
+      extensions = c("Buttons", "Scroller"),
+      
+      # Filter
+      filter = "bottom",
+      
+      options = list(
+        # Table components can be added/removed here
+        dom = "Blfrtip",
+        
+        # Freezing panes
+        fixedHeader = TRUE,
+        
+        # Specify buttons on top of table
+        buttons = c("copy", "excel", I("colvis")),
+        
+        # Scroll heights
+        scrollY = 300,
+        scrollX = 500,
+        
+        # Page length and menu
+        paging = TRUE,
+        pageLength = 50,
+        lengthMenu = list(
+          c(50, 100, 500, -1),
+          list("50", "100", "500", "All")
+        )
+      )
+      
+    )
+
+  })
+  ...

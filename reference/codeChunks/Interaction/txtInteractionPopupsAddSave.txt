@@ -1,0 +1,37 @@
+  ...
+  # Save New Product row in table when prompted
+  observeEvent(
+    input$cmdSaveNewProduct,
+    {
+      # Collect inputs
+      productName <- input$txtProductName
+      productPrice <- input$nbxProductPrice
+
+      # Input validation
+      if(validateProductData(productName, productPrice) == FALSE){
+
+        # Showing error message
+        shinyalert(
+          title = "Error",
+          text = "Please check the provided inputs.",
+          type = "error"
+        )
+
+      } else{
+
+        # Creating new record then updating table and reactive values
+        newRecord <- data.frame(Name = productName, Price = productPrice)
+        values$tblProducts <- rbind(values$tblProducts, newRecord)
+       
+        # Closing popup screen and showing completed message
+        removeModal()
+        shinyalert(
+          title = "Completed",
+          text = "Successfully added new product.",
+          type = "success"
+        )
+
+      }
+    }
+  )
+  ...

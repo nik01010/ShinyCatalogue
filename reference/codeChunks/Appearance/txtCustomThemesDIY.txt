@@ -1,0 +1,27 @@
+# Custom theme object -----------------------------------------------------
+theme_blue_gradient <- shinyDashboardThemeDIY(
+  
+  appFontFamily = "Arial"
+  ,appFontColor = "rgb(0,0,0)"
+  ,primaryFontColor = "rgb(0,0,0)"
+  ,infoFontColor = "rgb(0,0,0)"
+  ,successFontColor = "rgb(0,0,0)"
+  ,warningFontColor = "rgb(0,0,0)"
+  ,dangerFontColor = "rgb(0,0,0)"
+  ,bodyBackColor = "rgb(248,248,248)"
+  ...
+)
+
+
+# Using in dashboardbody -------------------------------------------------
+...
+# Ui body
+dashboardBody(
+  
+  # Changing theme
+  theme_blue_gradient
+  
+  # Ui tabs
+  ,tabItems(
+    tabItem(
+      ...

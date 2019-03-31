@@ -1,0 +1,38 @@
+  ...
+  # Monitor button that submits the Example Customer Form
+  observeEvent(
+    input$cmdExampleSave,
+    {
+      # Collect inputs
+      firstName <- input$txtExampleFirstName
+      lastName <- input$txtExampleLastName
+      custCode <- input$nbxExampleCode
+      bday <- input$txtExampleBirthday
+      
+      # Validate inputs
+      validationResult <- (
+        # Required inputs
+        validateRequiredInput(inputData = firstName, inputName = "First Name") &&
+        validateRequiredInput(inputData = lastName, inputName = "Last Name") &&
+        validateRequiredInput(inputData = custCode, inputName = "Code") &&
+          
+        # Custom logic
+        validateCustomerData(firstName, lastName, custCode, bday)
+      )
+      
+      # Check validation result
+      if(validationResult == TRUE){
+        # If ok, carry on normal process
+        # ...
+        
+        # Completed message
+        shinyalert(
+          title = "Completed",
+          text = "All inputs are valid.",
+          type = "success"
+        )
+      }
+      
+    }
+  )
+  ...

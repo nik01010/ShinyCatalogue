@@ -1,0 +1,15 @@
+  ...
+  # Show Edit Product Screen when prompted
+  observeEvent(
+    input$cmdShowEditProductScreen,
+    {
+      editScreen <- popupInputScreen(
+        title = "Edit Product", 
+        actionButtonId = "cmdSaveEditedProduct", 
+        actionButtonLabel = "Save Edited Product"
+      )
+      
+      showModal(editScreen)
+    }
+  )
+  ...

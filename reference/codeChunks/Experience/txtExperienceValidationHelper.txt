@@ -1,0 +1,58 @@
+# Helper functions --------------------------------------------------------
+
+# Validation function to check required inputs
+validateRequiredInput <- function(inputData, inputName)
+{
+  if(is.null(inputData) || is.na(inputData) || inputData == ""){
+    
+    # Error message
+    txtError <- paste("Please provide a value for the input", inputName)
+    
+    # Create error popup
+    shinyalert(
+      title = "Error",
+      text = txtError,
+      type = "error"
+    )
+    
+    return(FALSE)
+  }
+  
+  return(TRUE)
+}
+
+# Custom validation function for Customer Data
+validateCustomerData <- function(firstName, lastName, code, bday)
+{
+  # Custom string validation
+  if(firstName == lastName){
+    shinyalert(
+      title = "Error",
+      text = "First Name cannot be the same as Last Name",
+      type = "error"
+    )
+    return(FALSE)
+  }
+  
+  # Custom number validation
+  if(!is.numeric(code) || code < 0 || code > 100){
+    shinyalert(
+      title = "Error",
+      text = "Code must be a valid number between 0 and 100",
+      type = "error"
+    )
+    return(FALSE)
+  }
+  
+  # Custom date validation
+  if(month(bday) != 2){
+    shinyalert(
+      title = "Error",
+      text = "Customer must be born in February",
+      type = "error"
+    )
+    return(FALSE)
+  }
+  
+  return(TRUE)
+}

@@ -1,0 +1,44 @@
+  ...
+  column(
+    width = 5,
+    
+    textInput(
+      inputId = "txtExampleFirstName",
+      label = "First Name",
+      width = "100%"
+    ),
+    
+    textInput(
+      inputId = "txtExampleLastName",
+      label = "Last Name",
+      width = "100%"
+    ),
+    
+    numericInput(
+      inputId = "nbxExampleCode",
+      label = "Customer Code",
+      value = 0,
+      min = 0,
+      max = 100,
+      step = 1,
+      width = "100%"
+    ),
+    
+    dateInput(
+      inputId = "txtExampleBirthday",
+      label = "Birthday",
+      min = "1900-01-01",
+      max = "2000-01-01",
+      value = "1990-01-01",
+      format = "yyyy-mm-dd",
+      weekstart = 1,
+      width = "100%"
+    ),
+
+    actionButton(
+      inputId = "cmdExampleSave",
+      label = "Save Customer",
+      icon = icon("save"),
+      width = "100%"
+    )
+    ...

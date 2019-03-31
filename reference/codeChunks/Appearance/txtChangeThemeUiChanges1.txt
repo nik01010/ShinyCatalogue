@@ -1,0 +1,10 @@
+  ...
+  # Body
+  body = dashboardBody(
+
+    # Custom theme
+    uiChangeThemeOutput(),
+
+    # Ui tabs
+    tabItems(
+      ...

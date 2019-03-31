@@ -1,0 +1,20 @@
+server <- function(input, output, session) {
+  ...
+  # Monitor button link
+  observeEvent(
+    input$cmdLinkToHome,
+    {
+      updateTabItems(session = session, inputId = "tbsSidebar", selected = "tabHome")
+    }
+  )
+
+  # Monitor text hyperlink
+  observeEvent(
+    input$lnkLinkToHome,
+    {
+      updateTabItems(session = session, inputId = "tbsSidebar", selected = "tabHome")
+    },
+    ignoreInit = TRUE
+  )
+  ...
+}

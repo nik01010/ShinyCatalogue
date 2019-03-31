@@ -1,0 +1,11 @@
+  ...
+  # Ui body
+  dashboardBody(
+    
+    # Changing theme
+    shinyDashboardThemes(theme = "blue_gradient")
+    
+    # Ui tabs
+    ,tabItems(
+      tabItem(
+        ...

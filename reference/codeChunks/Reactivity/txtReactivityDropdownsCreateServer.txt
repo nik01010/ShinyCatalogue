@@ -1,0 +1,25 @@
+...
+  output$uiReactivityDropdowns <- renderUI({
+    tagList(
+      selectizeInput(
+        inputId = "dbxCustomer",
+        label = "Select Customer",
+        choices = tblCustomers$Name,
+        options = list(
+          placeholder = "Customer Name",
+          onInitialize = I('function() { this.setValue(""); }')
+        )
+      ),
+      
+      selectizeInput(
+        inputId = "dbxProduct",
+        label = "Select a Product",
+        choices = NULL,
+        options = list(
+          placeholder = "Product Name",
+          onInitialize = I('function() { this.setValue(""); }')
+        )
+      )
+    )
+  })
+...

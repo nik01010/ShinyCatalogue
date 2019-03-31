@@ -1,0 +1,49 @@
+  # Show popup alerts when prompted
+  
+  # Success
+  observeEvent(
+    input$cmdShowPopupSuccess,
+    {
+      shinyalert(
+        title = "Completed",
+        text = "This is an example Success message",
+        type = "success"
+      )
+    }
+  )
+  
+  # Info
+  observeEvent(
+    input$cmdShowPopupInfo,
+    {
+      shinyalert(
+        title = "FYI",
+        text = "This is an example Info message",
+        type = "info"
+      )
+    }
+  )
+  
+  # Warning
+  observeEvent(
+    input$cmdShowPopupWarning,
+    {
+      shinyalert(
+        title = "Careful",
+        text = "This is an example Warning message",
+        type = "warning"
+      )
+    }
+  )
+  
+  # Error
+  observeEvent(
+    input$cmdShowPopupError,
+    {
+      shinyalert(
+        title = "Error",
+        text = "This is an example Error message",
+        type = "error"
+      )
+    }
+  )

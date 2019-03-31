@@ -1,0 +1,17 @@
+  ...
+  # Render table
+  observe({
+    output$tblProducts <- DT::renderDataTable({
+      
+      datatable(
+        data = values$tblProducts,
+        rownames = FALSE,
+        selection = "single",
+        options = list(
+          dom = "t"
+        )
+      )
+      
+    })
+  })
+  ...

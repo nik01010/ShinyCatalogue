@@ -1,0 +1,6 @@
+server <- function(input, output, session) {
+  ...
+  # Changing theme ----------------------------------------------------------
+  callModule(module = serverChangeTheme, id = "moduleChangeTheme")
+  ...
+}

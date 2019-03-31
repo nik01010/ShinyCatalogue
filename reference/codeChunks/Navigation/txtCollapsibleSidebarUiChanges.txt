@@ -1,0 +1,14 @@
+  ...
+  # Sidebar -----------------------------------------------------------------
+  sidebar = dashboardSidebar(
+  
+    sidebarMenu(
+     
+      id = "tbsSidebar", 
+
+      # Allowing the shinyjs package to be used
+      useShinyjs(),
+
+      # Allowing for collapsible sidebar with fixed width logo
+      uiCollapsibleSidebar(sideBarWidthPixels = 250),
+      ...

@@ -1,0 +1,14 @@
+  ...
+  fluidRow(
+    # Table output
+    dataTableOutput("tblProducts")
+  ),
+  fluidRow(
+    actionButton(
+      inputId = "cmdShowAddProductScreen",
+      label = "Add Product",
+      icon = icon("plus-circle"),
+      width = "100%"
+    )
+  )
+  ...

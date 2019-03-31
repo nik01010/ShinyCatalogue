@@ -1,0 +1,12 @@
+  ...
+  # Tab content
+  tabItem(
+    tabName = "tabThemes",
+    fluidRow(
+      column(
+        width = 12,
+
+        # Theme drop-down
+        uiChangeThemeDropdown(dropDownLabel = "Change Theme", defaultTheme = "onenote")
+      )
+      ...

@@ -1,0 +1,6 @@
+  ...
+  sidebar = dashboardSidebar(
+    sidebarMenu(
+      # Allowing the shinyalert package to be used
+      useShinyalert(),
+      ...

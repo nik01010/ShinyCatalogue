@@ -1,0 +1,15 @@
+  ...
+  # Show Add Product Screen when prompted
+  observeEvent(
+    input$cmdShowAddProductScreen,
+    {
+      createScreen <- popupInputScreen(
+        title = "Add Product", 
+        actionButtonId = "cmdSaveNewProduct", 
+        actionButtonLabel = "Save New Product"
+      )
+      
+      showModal(createScreen)
+    }
+  )
+  ...

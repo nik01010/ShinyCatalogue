@@ -1,0 +1,20 @@
+  # Reactive values
+  values <- reactiveValues()
+  observe({values$dbxCustomer <- input$dbxCustomer})
+  observe({values$dbxProduct <- input$dbxProduct})
+  
+  # Monitor customer drop-down
+  observe({
+    if(!is.null(values$dbxCustomer)){
+      # Get available product choices
+      values$tblProductsForCustomer <- tblCustomersProducts %>%
+        filter(CustomerName == values$dbxCustomer)
+      
+      # Update product drop-down choices
+      updateSelectizeInput(
+        session = session,
+        inputId = "dbxProduct",
+        choices = values$tblProductsForCustomer$ProductName
+      )
+    }
+  })

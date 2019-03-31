@@ -1,0 +1,13 @@
+  ...
+  fluidRow(
+    
+    column(
+      
+      width = 12,
+      
+      # Button link
+      actionButton(inputId = "cmdLinkToHome", label = "Link to Homepage", icon = icon("th")),
+      
+      # Text hyperlink
+      actionLink(inputId = "lnkLinkToHome", label = "Link To Homepage", icon = icon("th")),
+      ...

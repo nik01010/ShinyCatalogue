@@ -1,0 +1,14 @@
+  ...
+  fluidRow(
+    
+    column(
+      
+      width = 10,
+      
+      div(
+        dataTableOutput("tblExampleDataTable"),
+        style = "font-size: 80%;"
+      )
+      
+    )
+    ...

@@ -1,0 +1,8 @@
+  ...
+  # Sidebar -----------------------------------------------------------------
+  sidebar = dashboardSidebar(
+  
+    sidebarMenu(
+      
+      id = "tbsSidebar",
+      ...

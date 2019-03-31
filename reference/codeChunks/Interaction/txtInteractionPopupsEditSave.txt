@@ -1,0 +1,35 @@
+  ...
+  # Save Edited Product row in table when prompted
+  observeEvent(
+    input$cmdSaveEditedProduct,
+    {
+      # Collect inputs
+      productName <- input$txtProductName
+      productPrice <- input$nbxProductPrice
+      # Selected table row to edit
+      selectedRow <- input$tblProductsEdit_rows_selected
+
+      # Input validation
+      if(validateProductData(productName, productPrice) == FALSE){
+        # Showing error message
+        shinyalert(
+          title = "Error",
+          text = "Please check the provided inputs.",
+          type = "error"
+        )
+      } else{
+        # Editing existing record then updating table and reactive values
+        values$tblProducts$Name[selectedRow] <- productName
+        values$tblProducts$Price[selectedRow] <- productPrice
+
+        # Closing popup screen and showing completed message
+        removeModal()
+        shinyalert(
+          title = "Completed",
+          text = "Successfully edited product.",
+          type = "success"
+        )
+      }
+    }
+  )
+  ...

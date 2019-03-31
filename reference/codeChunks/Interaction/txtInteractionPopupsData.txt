@@ -1,0 +1,10 @@
+  ...
+  # Reactive values
+  values <- reactiveValues()
+
+  # Data required for table
+  values$tblProducts <- data.frame(
+    Name = c("PS4", "Xbox", "Switch"),
+    Price = c(300, 250, 200)
+  )
+  ...

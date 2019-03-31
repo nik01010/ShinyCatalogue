@@ -1,0 +1,33 @@
+# Custom logo object ------------------------------------------------------
+custom_logo <- shinyDashboardLogoDIY(
+  boldText = "Your"
+  ,mainText = "AppName"
+  ,textSize = 16
+  ,badgeText = "v1.0"
+  ,badgeTextColor = "black"
+  ,badgeTextSize = 2
+  ,badgeBackColor = "#d1e709"
+  ,badgeBorderRadius = 3
+)
+
+smaller_logo <- shinyDashboardLogoDIY(
+  boldText = "Smaller"
+  ,mainText = "Logo"
+  ,textSize = 13
+  ,badgeText = "ALPHA"
+  ,badgeTextColor = "black"
+  ,badgeTextSize = 1
+  ,badgeBackColor = "#d1e709"
+  ,badgeBorderRadius = 3
+)
+
+# Using in dashboardHeader ------------------------------------------------
+...
+ui <- dashboardPage(
+
+  # Ui header
+  dashboardHeader(
+    
+    # Changing logo
+    title = custom_logo
+    ...

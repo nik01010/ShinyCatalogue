@@ -1,0 +1,56 @@
+  ...
+  # Show the progress indicator when prompted
+  observeEvent(
+    input$cmdExampleStartProcess,
+    {
+      # Progress indicator
+      withProgress(
+        message = "Example progress bar",
+        value = 0,
+        min = 0,
+        max = 4,
+        {
+          
+          # Task 1
+          incProgress(amount = 1, detail = "Task 1")
+          # Simulating task using sleep function
+          Sys.sleep(2)
+          
+          # Task 2
+          incProgress(amount = 1, detail = "Task 2")
+          # Task 2 sub-tasks
+          withProgress(
+            message = "Task 2 sub-tasks",
+            value = 0,
+            min = 1,
+            max = 5,
+            {
+              # Task 2 Subtask
+              # Simulating looped task using sleep function
+              for(i in 1:5){
+                incProgress(amount = 1, detail = paste("Processing Task 2 Item",i))
+                Sys.sleep(1)
+              }
+            }
+          )
+          
+          # Task 3
+          incProgress(amount = 1, detail = "Task 3")
+          # Simulating task using sleep function
+          Sys.sleep(2)
+        }
+      )
+      
+      # Completed notification
+      showNotification(
+        ui = list(
+          h4(strong("Completed")),
+          h5(paste("Example process completed at", Sys.time()))
+        ),
+        duration = NULL,
+        closeButton = TRUE,
+        session = session
+      )
+    }
+  )
+  ...

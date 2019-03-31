@@ -1,0 +1,15 @@
+# Static data
+
+tblCustomers <- data.frame(
+  Name = c("John", "Jack", "Jill")
+)
+
+tblProducts <- data.frame(
+  Name = c("PS4", "Xbox", "Switch"),
+  Price = c("300", "250", "200")
+)
+
+tblCustomersProducts <- data.frame(
+  ProductName = c("PS4", "PS4", "Xbox", "Switch", "Switch"),
+  CustomerName = c("John", "Jack", "Jack", "Jack", "Jill")
+)

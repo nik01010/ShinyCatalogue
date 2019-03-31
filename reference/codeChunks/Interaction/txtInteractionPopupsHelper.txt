@@ -1,0 +1,58 @@
+# Helper function to create popup input screen
+popupInputScreen <- function(title, actionButtonId, actionButtonLabel)
+{  
+  popupScreen <- modalDialog(
+    
+    title = title,
+    size = "m",
+    easyClose = FALSE,
+    
+    fluidPage(
+      fluidRow(
+        column(
+          width = 12,
+
+          textInput(
+            inputId = "txtProductName",
+            label = "Product Name",
+            value = NULL
+          ),
+          
+          numericInput(
+            inputId = "nbxProductPrice",
+            label = "Product Price",
+            min = 0,
+            max = 1000,
+            value = 0,
+            step = 1
+          )
+        )
+      )
+    ),
+    
+    footer = list(
+      actionButton(
+        inputId = actionButtonId,
+        label = actionButtonLabel,
+        icon = icon("save")
+      ),
+      modalButton("Dismiss")
+    )
+  )
+}
+
+# Helper function to validate product data
+validateProductData <- function(name, price)
+{
+  if(is.null(name) || is.null(price)){
+    return(FALSE)
+  }
+  if(is.character(name) == FALSE || is.numeric(price) == FALSE){
+    return(FALSE)
+  }
+  if(name == "" || price < 0){
+    return(FALSE)
+  }
+  return(TRUE)
+}
+
