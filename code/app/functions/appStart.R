@@ -52,6 +52,8 @@ appData <- function()
   dataList$packageUrls$dplyr <- a("dplyr", href="https://github.com/tidyverse/dplyr", target="_blank")
   dataList$packageUrls$shinyalert <- a("shinyalert", href="https://github.com/daattali/shinyalert", target="_blank")
   dataList$packageUrls$DT <- a("DT", href="https://github.com/rstudio/DT", target="_blank")
+  dataList$packageUrls$datatree <- a("data.tree", href="https://github.com/gluc/data.tree", target="_blank")
+  dataList$packageUrls$collapsibleTree <- a("collapsibleTree", href="https://github.com/AdeelK93/collapsibleTree", target="_blank")
   
   return(dataList)
 }

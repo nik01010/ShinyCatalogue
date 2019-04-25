@@ -1,0 +1,32 @@
+  ...
+  # Render collapsible tree
+  output$ctrProjectFolderStructure <- renderCollapsibleTree({
+    collapsibleTree(
+      df = projectFilePathTree,
+      inputId = "treProjectFolderStructure",
+      tooltip=TRUE,
+      attribute="Value",
+      aggFun=identity,
+      zoomable = TRUE,
+      width = "100%",
+      height = "600px"
+    )
+  })
+  
+  # Render text for selected tree node
+  output$txtSelectedTreePath <- renderText({values$txtSelectedTreePath})
+  
+  # Read file contents when prompted
+  observeEvent(
+    input$treProjectFolderStructure,
+    {
+      # Use selected node to get required filepath
+      basePath <- "."
+      selectedNodePath <- paste(input$treProjectFolderStructure, collapse = "/")
+      selectedFilePath <- file.path(basePath, selectedNodePath)
+      
+      # Update reactive values with selected path
+      values$txtSelectedTreePath <- paste("Selected path:", selectedFilePath)
+    }
+  )
+  ...

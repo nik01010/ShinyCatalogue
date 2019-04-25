@@ -3,13 +3,25 @@
   observeEvent(
     input$cmdShowEditProductScreen,
     {
-      editScreen <- popupInputScreen(
-        title = "Edit Product", 
-        actionButtonId = "cmdSaveEditedProduct", 
-        actionButtonLabel = "Save Edited Product"
-      )
+      # Selected table row to edit
+      selectedRow <- input$tblProductsEdit_rows_selected
       
-      showModal(editScreen)
+      # Validation
+      if(is.null(selectedRow)){
+        shinyalert(
+          title = "Error",
+          text = "Please select a table row to edit.",
+          type = "error"
+        )
+      } else{
+        editScreen <- popupInputScreen(
+          title = "Edit Product", 
+          actionButtonId = "cmdSaveEditedProduct", 
+          actionButtonLabel = "Save Edited Product"
+        )
+        
+        showModal(editScreen)
+      }
     }
   )
   ...

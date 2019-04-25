@@ -1,0 +1,14 @@
+  ...
+  column(
+    
+    width = 6,
+    
+    h4("Example"),
+    h5("Visualise collapsible tree structures and allow selection of nodes."),
+    
+    collapsibleTreeOutput("ctrProjectFolderStructure"),
+    
+    textOutput("txtSelectedTreePath")
+    
+  ),
+  ...

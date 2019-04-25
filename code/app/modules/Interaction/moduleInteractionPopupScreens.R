@@ -264,9 +264,7 @@ serverInteractionPopupScreens <- function(input, output, session, moduleData)
                     )
                     
                   ) %>%
-                  
 
-                  
                   bs_append(
                     
                     title = "Step 3: Create table and Add button",
@@ -484,7 +482,8 @@ serverInteractionPopupScreens <- function(input, output, session, moduleData)
                       
                       h5(
                         "In the Server, add an ObserveEvent that monitors the Edit Product button
-                        and calls the helper function created earlier."
+                        and calls the helper function created earlier. Add a validation check to ensure
+                        the user has actually selected a row."
                       ),
                       
                       aceEditor(
@@ -559,13 +558,25 @@ serverInteractionPopupScreens <- function(input, output, session, moduleData)
   observeEvent(
     input$cmdShowEditProductScreen,
     {
-      editScreen <- popupInputScreen(
-        title = "Edit Product", 
-        actionButtonId = "cmdSaveEditedProduct", 
-        actionButtonLabel = "Save Edited Product"
-      )
+      # Selected table row to edit
+      selectedRow <- input$tblProductsEdit_rows_selected
       
-      showModal(editScreen)
+      # Validation
+      if(is.null(selectedRow)){
+        shinyalert(
+          title = "Error",
+          text = "Please select a table row to edit.",
+          type = "error"
+        )
+      } else{
+        editScreen <- popupInputScreen(
+          title = "Edit Product", 
+          actionButtonId = "cmdSaveEditedProduct", 
+          actionButtonLabel = "Save Edited Product"
+        )
+        
+        showModal(editScreen)
+      }
     }
   )
   

@@ -1,0 +1,35 @@
+  ...
+  # Example file paths for a project
+  projectFilePaths <- c(
+    "app/ui.R",
+    "app/server.R",
+    "app/ShinyCatalogue.Rproj",
+    "app/Scripts/functions/appStart.R",
+    "app/Scripts/modules/Appearance/moduleAppearanceThemes.R",
+    "app/Scripts/modules/Appearance/moduleChangeTheme.R",
+    "app/Scripts/modules/DataTables/moduleDataTables.R",
+    "app/Scripts/modules/Experience/moduleExperiencePopups.R",
+    "app/Scripts/modules/Experience/moduleExperienceProgress.R",
+    "app/Scripts/modules/Experience/moduleExperienceValidation.R",
+    "app/Scripts/modules/Home/moduleHome.R",
+    "app/Scripts/modules/Home/moduleSidebarMenu.R",
+    "app/Scripts/modules/Interaction/moduleInteractionPopupScreens.R",
+    "app/Scripts/modules/Interaction/moduleInteractionTrees.R",
+    "app/Scripts/modules/Navigation/moduleCollapsibleSidebar.R",
+    "app/Scripts/modules/Navigation/moduleNavigationLinks.R",
+    "app/Scripts/modules/Navigation/moduleNavigationSidebar.R",
+    "app/Scripts/modules/Reactivity/moduleReactivityDropdowns.R",
+    "app/www/collapsibleSidebar.gif"
+  )
+  # Alternative method of deriving file paths programmatically
+  #projectRootPath <- "../"
+  #projectFilePaths <- list.files(path = projectRootPath, all.files = FALSE, recursive = TRUE)
+  
+  # Creating nodes for tree
+  projectFilePathTree <- as.Node(data.frame(pathString = projectFilePaths, Value = projectFilePaths))
+  
+  # Reactive values
+  values <- reactiveValues()
+  # Placeholder text
+  values$txtSelectedTreePath <- "Select a node in the tree."
+  ...
