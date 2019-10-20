@@ -1,5 +1,5 @@
 # Ui functions ------------------------------------------------------------
-uiCollapsibleSidebar <- function(sideBarWidthPixels = 250){
+uiCollapsibleSidebar <- function(sideBarWidthPixels = 230){
   logoWidthSettings <- tagList(
     inlineCSS(paste0(".main-header > .navbar {margin-left: ", sideBarWidthPixels, "px !important}")),
     inlineCSS(paste0(".main-header .logo {width: ", sideBarWidthPixels, "px !important}"))

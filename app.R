@@ -39,7 +39,7 @@ ui <- dashboardPage(
       boldText = paste(icon("bookmark"), "Shiny"),
       mainText = "Catalogue",
       textSize = 16,
-      badgeText = "BETA",
+      badgeText = "v1.0",
       badgeTextColor = "white",
       badgeTextSize = 2,
       badgeBackColor = "#40E0D0",
@@ -62,7 +62,7 @@ ui <- dashboardPage(
       useShinyjs(),
       
       # Allowing for collapsible sidebar with fixed width logo
-      uiCollapsibleSidebar(sideBarWidthPixels = 250),
+      uiCollapsibleSidebar(sideBarWidthPixels = 230),
       
       ### sidebar tab links -------------------------------------------------------
       uiSidebarMenuItems()

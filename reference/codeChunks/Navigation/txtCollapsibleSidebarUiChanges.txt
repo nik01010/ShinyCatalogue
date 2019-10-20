@@ -10,5 +10,5 @@
       useShinyjs(),
 
       # Allowing for collapsible sidebar with fixed width logo
-      uiCollapsibleSidebar(sideBarWidthPixels = 250),
+      uiCollapsibleSidebar(sideBarWidthPixels = 230),
       ...
