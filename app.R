@@ -22,7 +22,7 @@ library(collapsibleTree)
 
 
 # Source functions --------------------------------------------------------
-source("./functions/appStart.R")
+source("./code/functions/appStart.R")
 importShinyModules()
 
 # Ui ----------------------------------------------------------------------

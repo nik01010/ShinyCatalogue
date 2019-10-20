@@ -1,5 +1,5 @@
 # Import all Shiny module files -------------------------------------------
-importShinyModules <- function(path = "./modules/")
+importShinyModules <- function(path = "./code/modules/")
 {
   moduleFiles <- list.files(path = path, pattern = "\\.[Rr]", recursive = TRUE)
   
@@ -11,7 +11,7 @@ importShinyModules <- function(path = "./modules/")
 }
 
 # Import text files for code chunks ---------------------------------------
-importCodeChunks <- function(path = "../../reference/codeChunks/")
+importCodeChunks <- function(path = "./reference/codeChunks/")
 {
   codeChunks <- list()
   
