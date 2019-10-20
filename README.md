@@ -3,9 +3,14 @@
 <a href="https://nik01010.wordpress.com/" target="_blank">Blog</a> | <a href="https://nik01010.wordpress.com/contact/" target="_blank">Contact</a>
 <br>
 
-Available here: https://nik01010.shinyapps.io/ShinyCatalogue/
-
 A collection of re-usable components, modules and tutorials for using advanced R Shinydashboard functionality.
+
+## How to access:
+https://nik01010.shinyapps.io/ShinyCatalogue/
+
+<br>
+
+## Main categories:
 - **Navigation**: Improved sidebar and linking between tabs.
 - **Reactivity**: Updating dropbox content dynamically.
 - **Datatables**: Customisable data table features.
