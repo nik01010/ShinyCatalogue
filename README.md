@@ -8,8 +8,6 @@ A collection of re-usable components, modules and tutorials for using advanced R
 ## How to access:
 https://nik01010.shinyapps.io/ShinyCatalogue/
 
-<br>
-
 ## Main categories:
 - **Navigation**: Improved sidebar and linking between tabs.
 - **Reactivity**: Updating dropbox content dynamically.
