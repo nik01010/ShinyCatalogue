@@ -26,7 +26,7 @@ serverHome <- function(input, output, session)
         
         column(
           
-          width = 12,
+          width = 10,
           
           box(
             width = 9,
@@ -36,13 +36,20 @@ serverHome <- function(input, output, session)
             solidHeader = TRUE,
             
             column(
-              width = 12,
+              width = 10,
               h1("Shiny Catalogue"),
               hr(),
               h5("A collection of re-usable components, modules and tutorials for using advanced R Shinydashboard functionality.")
+            ),
+            
+            column(
+              width = 2,
+              a("Queries/Contributions", href = "https://nik01010.wordpress.com/contact/"),
+              a("GitHub page", href = "https://github.com/nik01010/ShinyCatalogue")
             )
+            
           )
-
+          
         )
         
       ),
