@@ -44,8 +44,8 @@ serverHome <- function(input, output, session)
             
             column(
               width = 2,
-              a("Queries/Contributions", href = "https://nik01010.wordpress.com/contact/"),
-              a("GitHub page", href = "https://github.com/nik01010/ShinyCatalogue")
+              a("Queries/Contributions", href = "https://nik01010.wordpress.com/contact/", target = "_blank"),
+              a("GitHub page", href = "https://github.com/nik01010/ShinyCatalogue", target = "_blank")
             )
             
           )
